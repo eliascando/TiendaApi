@@ -13,7 +13,7 @@ namespace TiendaApi.Controllers
         {
             var funcion = new ProductosData();
             var lista = await funcion.MostrarProductos();
-            return lista;
+            return Ok(lista);
         }
         [HttpPost]
         public async Task Post([FromBody] ProductosModel productos)
